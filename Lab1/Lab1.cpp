@@ -1,25 +1,25 @@
-// Lab1.cpp
+п»ї// Lab1.cpp
 
 #include <iostream>
 
 #define PI 3.141592653589793
 
-//Задача 8: Обчислити об'єми циліндра і конуса, що мають однакову висоту і мають однаковий радіус
+//Р—Р°РґР°С‡Р° 8: РћР±С‡РёСЃР»РёС‚Рё РѕР±'С”РјРё С†РёР»С–РЅРґСЂР° С– РєРѕРЅСѓСЃР°, С‰Рѕ РјР°СЋС‚СЊ РѕРґРЅР°РєРѕРІСѓ РІРёСЃРѕС‚Сѓ С– РјР°СЋС‚СЊ РѕРґРЅР°РєРѕРІРёР№ СЂР°РґС–СѓСЃ
 int main() {
 
     double height, radius, cillinderVolume, coneVolume;
 
-    //введення данних
-    std::cout << "абвг Enter the height of the shape: ";
+    //РІРІРµРґРµРЅРЅСЏ РґР°РЅРЅРёС…
+    std::cout << "Р°Р±РІРі Enter the height of the shape: ";
     std::cin >> height;
     std::cout << "\nEnter the radius of the shape: ";
     std::cin >> radius;
 
-    //обчислення об'ємів фігур
+    //РѕР±С‡РёСЃР»РµРЅРЅСЏ РѕР±'С”РјС–РІ С„С–РіСѓСЂ
     cillinderVolume = radius * PI * height;
     coneVolume = 1.0 / 3.0 * PI * radius * radius * height;
 
-    //виведення результатів
+    //РІРёРІРµРґРµРЅРЅСЏ СЂРµР·СѓР»СЊС‚Р°С‚С–РІ
     std::cout << "\nThe volume of the shape: " << cillinderVolume;
     std::cout << "\nThe volume of the shape: " << coneVolume << "\n";
     system("pause");
