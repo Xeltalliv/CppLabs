@@ -10,7 +10,7 @@ int main() {
     double height, radius, cillinderVolume, coneVolume;
 
     //введення данних
-    std::cout << "Enter the height of the shape: ";
+    std::cout << "абвг Enter the height of the shape: ";
     std::cin >> height;
     std::cout << "\nEnter the radius of the shape: ";
     std::cin >> radius;
