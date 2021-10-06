@@ -1,4 +1,4 @@
-﻿// Lab1.cpp
+﻿// Lab2.cpp
 
 #include <iostream>
 #include <Windows.h>
