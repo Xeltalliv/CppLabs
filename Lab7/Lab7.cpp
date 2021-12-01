@@ -9,7 +9,8 @@
 //         найменшого серед додатних чисел. Поміняти знайдений і максимальний елемент масиву.
 
 void fillArray(int[], int);
-void findMinMax(int[], int, int&, int&, int&, int&);
+void findMin(int[], int, int&, int&);
+void findMax(int[], int, int&, int&);
 void outputResult(int[], int, int, int, int, int);
 void printArray(int[], int);
 
@@ -32,7 +33,8 @@ int main() {
 	std::cout << "Масив: ";
 	printArray(array, length);
 	std::cout << "\n" << divider << "\n";
-	findMinMax(array, length, minValue, minIndex, maxValue, maxIndex);
+	findMin(array, length, minValue, minIndex);
+	findMax(array, length, maxValue, maxIndex);
 	outputResult(array, length, minValue, minIndex, maxValue, maxIndex);
 }
 
@@ -43,16 +45,21 @@ void fillArray(int array[], int length) {
 	}
 }
 
-void findMinMax(int array[], int length, int &minValue, int &minIndex, int &maxValue, int &maxIndex) {
+void findMin(int array[], int length, int& minValue, int& minIndex) {
 	minValue = 0;
 	minIndex = -1;
-	maxValue = array[0];
-	maxIndex = 0;
 	for (int i = 0; i < length; i++) {
 		if (array[i] > 0 && (minIndex == -1 || array[i] < minValue)) {
 			minValue = array[i];
 			minIndex = i;
 		}
+	}
+}
+
+void findMax(int array[], int length, int& maxValue, int& maxIndex) {
+	maxValue = array[0];
+	maxIndex = 0;
+	for (int i = 0; i < length; i++) {
 		if (array[i] > maxValue) {
 			maxValue = array[i];
 			maxIndex = i;
