@@ -13,7 +13,7 @@ int main() {
 	std::string divider(119, '=');
 	std::cout << divider << "\n";
 
-	for (int iterator = 100; iterator < 201; iterator++) {
+	for (int iterator = 100; iterator <= 200; iterator++) {
 		int number = iterator;
 		std::string globalString(std::to_string(number) + " --> ");
 		while (number >= 10) {
