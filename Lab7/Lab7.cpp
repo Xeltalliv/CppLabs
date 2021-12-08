@@ -13,6 +13,7 @@ void findMin(int[], int, int&, int&);
 void findMax(int[], int, int&, int&);
 void outputResult(int[], int, int, int, int, int);
 void printArray(int[], int);
+void swapElements(int[], int, int);
 
 int main() {
 	SetConsoleOutputCP(CP_UTF8);
@@ -35,6 +36,7 @@ int main() {
 	std::cout << "\n" << divider << "\n";
 	findMin(array, length, minValue, minIndex);
 	findMax(array, length, maxValue, maxIndex);
+	swapElements(array, minIndex, maxIndex);
 	outputResult(array, length, minValue, minIndex, maxValue, maxIndex);
 }
 
@@ -74,11 +76,14 @@ void outputResult(int array[], int length, int minValue, int minIndex, int maxVa
 		std::cout << "Найменше  додатнє число: array[" << minIndex << "] = " << minValue << "\n";
 		std::cout << "Найбільше додатнє число: array[" << maxIndex << "] = " << maxValue << "\n";
 		std::cout << "Зміна їх місцями: \n";
-		int tmp = array[minIndex];
-		array[minIndex] = array[maxIndex];
-		array[maxIndex] = tmp;
 		printArray(array, length);
 	}
+}
+
+void swapElements(int array[], int minIndex, int maxIndex) {
+	int tmp = array[minIndex];
+	array[minIndex] = array[maxIndex];
+	array[maxIndex] = tmp;
 }
 
 void printArray(int array[], int length) {
